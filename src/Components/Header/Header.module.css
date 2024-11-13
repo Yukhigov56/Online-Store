@@ -1,0 +1,14 @@
+.containerHead {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rightCol {
+    display: flex;
+    gap: 45px;
+}
+
+.blockBasket {
+    display: flex;
+    align-items: center;
+}

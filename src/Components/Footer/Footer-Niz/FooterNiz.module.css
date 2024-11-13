@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.nizFooter {
+  display: flex;
+  justify-content: center;
+  height: 255px;
+  background: rgba(51, 51, 51, 1);
+}
+
+.containerFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1350px;
+}
+
+.list {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+
+.list li {
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21.19px;
+}
+
+.blockLogo {
+  display: flex;
+  gap: 20px;
+}
+
+.phoneNumber {
+  color: white;
+}

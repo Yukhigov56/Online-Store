@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.titleMixes {
+  color: rgba(79, 79, 79, 1);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21.19px;
+  width: 1350px;
+  margin: 75px auto 30px;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.containerCard {
+  display: flex;
+  gap: 27px;
+  width: 1350px;
+}
+
+.cardTitle {
+  margin-top: 25px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 31.2px;
+}
+
+.card {
+  border-radius: 10px;
+  position: relative;
+  padding: 20px 20px 30px 20px;
+  width: 315px;
+  background-color: white;
+}
+
+.cardParagraph {
+  margin-top: 5px;
+  color: rgba(130, 130, 130, 1);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20.8px;
+}
+
+.price {
+  margin-top: 25px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26.6px;
+}
+
+.blockBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-top: 25px;
+}
+
+.btnCard {
+  background: rgba(63, 207, 94, 1);
+  color: white;
+  border: none;
+  width: 161px;
+  height: 45px;
+  border-radius: 5px;
+}

@@ -1,0 +1,51 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.titleBirds {
+  color: rgba(79, 79, 79, 1);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21.19px;
+  width: 1350px;
+  margin: 75px auto 30px;
+}
+
+.containerCard {
+  display: flex;
+  gap: 25px;
+  width: 1350px;
+}
+
+.card {
+  border-radius: 10px;
+  display: inline-block;
+  background-color: white;
+  padding: 20px;
+}
+
+.titleCard {
+  margin-top: 25px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 31.2px;
+}
+
+.paragraphNum {
+  margin-top: 10px;
+  color: rgba(130, 130, 130, 1);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20.8px;
+}
+
+.btnCard {
+  background: rgba(63, 207, 94, 1);
+  margin-top: 25px;
+  color: white;
+  border: none;
+  width: 161px;
+  height: 45px;
+  border-radius: 5px;
+}
