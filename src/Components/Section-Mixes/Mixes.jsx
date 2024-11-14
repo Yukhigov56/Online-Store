@@ -1,18 +1,24 @@
 import React from "react";
 import style from "./Mixes.module.css";
 
-import { New } from "./New";
+import { useDispatch, useSelector } from "react-redux";
+import { changeWeight } from "../../Redux/PriceSlice";
 
+import { New } from "./New";
 import basket from "../../../public/images/Buy.svg";
 import mixesCardImg from "../../../public/images/фото (1).svg";
 
+
 export const Mixes = () => {
+  const { price, selectedWeight } = useSelector((state) => state.price);
+  const dispatch = useDispatch();
+
   const mixes = [
     {
       CardImg: mixesCardImg,
       title: "PADOVAN OVAMIX GOLD ROSSO",
       discription: "Корм для птиц",
-      price: "1000 руб",
+      price: price,
       button: "Подробнее",
       logoBasket: basket,
     },
@@ -20,16 +26,7 @@ export const Mixes = () => {
       CardImg: mixesCardImg,
       title: "PADOVAN OVAMIX GOLD ROSSO",
       discription: "Корм для птиц",
-      price: "1000 руб",
-      button: "Подробнее",
-      logoBasket: basket,
-      newCard: <New />,
-    },
-    {
-      CardImg: mixesCardImg,
-      title: "PADOVAN OVAMIX GOLD ROSSO",
-      discription: "Корм для птиц",
-      price: "1000 руб",
+      price: price,
       button: "Подробнее",
       logoBasket: basket,
       newCard: <New />,
@@ -38,11 +35,56 @@ export const Mixes = () => {
       CardImg: mixesCardImg,
       title: "PADOVAN OVAMIX GOLD ROSSO",
       discription: "Корм для птиц",
-      price: "1000 руб",
+      price: price,
+      button: "Подробнее",
+      logoBasket: basket,
+      newCard: <New />,
+    },
+    {
+      CardImg: mixesCardImg,
+      title: "PADOVAN OVAMIX GOLD ROSSO",
+      discription: "Корм для птиц",
+      price: price,
+      button: "Подробнее",
+      logoBasket: basket,
+    },
+    {
+      CardImg: mixesCardImg,
+      title: "PADOVAN OVAMIX GOLD ROSSO",
+      discription: "Корм для птиц",
+      price: price,
+      button: "Подробнее",
+      logoBasket: basket,
+    },
+    {
+      CardImg: mixesCardImg,
+      title: "PADOVAN OVAMIX GOLD ROSSO",
+      discription: "Корм для птиц",
+      price: price,
+      button: "Подробнее",
+      logoBasket: basket,
+    },
+    {
+      CardImg: mixesCardImg,
+      title: "PADOVAN OVAMIX GOLD ROSSO",
+      discription: "Корм для птиц",
+      price: price,
+      button: "Подробнее",
+      logoBasket: basket,
+    },
+    {
+      CardImg: mixesCardImg,
+      title: "PADOVAN OVAMIX GOLD ROSSO",
+      discription: "Корм для птиц",
+      price: price,
       button: "Подробнее",
       logoBasket: basket,
     },
   ];
+
+  const handleWeigthChenge = (weight) => {
+    dispatch(changeWeight(weight));
+  };
 
   return (
     <div>
@@ -58,8 +100,10 @@ export const Mixes = () => {
               <p className={style.cardParagraph}>{card.discription}</p>
               <p className={style.price}>{card.price}</p>
               <p className={style.paragraphSpan}>
-                <span>200г</span> <span>400г</span> <span>8000г</span>{" "}
-                <span>1кг</span>
+                <span onClick={() => handleWeigthChenge("200г")}>200г</span>
+                <span onClick={() => handleWeigthChenge("400г")}>400г</span>
+                <span onClick={() => handleWeigthChenge("800г")}>800г</span>
+                <span onClick={() => handleWeigthChenge("1кг")}>1кг</span>
               </p>
               <div className={style.blockBtn}>
                 <button className={style.btnCard}>{card.button}</button>

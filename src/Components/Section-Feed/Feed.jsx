@@ -33,11 +33,39 @@ export const Feed = () => {
       price: "1000 руб",
       button: "Подробнее",
     },
+    {
+      CardImg: feedImg,
+      title: 'Комплект-агро "Избушка на курьих ножках"',
+      discription: "кормушка малая",
+      price: "1000 руб",
+      button: "Подробнее",
+    },
+    {
+      CardImg: feedImg,
+      title: 'Комплект-агро "Избушка на курьих ножках"',
+      discription: "кормушка малая",
+      price: "1000 руб",
+      button: "Подробнее",
+    },
+    {
+      CardImg: feedImg,
+      title: 'Комплект-агро "Избушка на курьих ножках"',
+      discription: "кормушка малая",
+      price: "1000 руб",
+      button: "Подробнее",
+    },
+    {
+      CardImg: feedImg,
+      title: 'Комплект-агро "Избушка на курьих ножках"',
+      discription: "кормушка малая",
+      price: "1000 руб",
+      button: "Подробнее",
+    },
   ];
 
   return (
     <div>
-      <h3 className={style.titleMixes}>Готовые миксы</h3>
+      <h3 className={style.titleMixes}>Кормушки</h3>
       <div className={style.mainContainer}>
         <div className={style.containerCard}>
           {FeedCards.map((card) => (

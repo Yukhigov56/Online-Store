@@ -20,6 +20,7 @@
 
 .containerCard {
   display: flex;
+  flex-wrap: wrap;
   gap: 27px;
   width: 1350px;
 }
@@ -84,15 +85,23 @@
 }
 
 .paragraphSpan span {
+  display: inline-block;
+  padding: 5px 10px;
   margin-left: 12px;
   padding: 3px;
   font-weight: 500;
-  border: 1px solid white;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
   font-size: 18px;
   line-height: 21.19px;
 }
 
 .paragraphSpan span:hover {
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.paragraphSpan span.active {
   border: 1px solid;
   cursor: pointer;
 }

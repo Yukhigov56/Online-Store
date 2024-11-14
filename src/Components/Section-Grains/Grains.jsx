@@ -43,7 +43,7 @@ export const Grains = () => {
 
   return (
     <div>
-      <h3 className={style.titleMixes}>Готовые миксы</h3>
+      <h3 className={style.titleMixes}>Зёрна</h3>
 
       <div className={style.mainContainer}>
         <div className={style.containerCard}>

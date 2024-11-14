@@ -20,6 +20,7 @@
 
 .containerCard {
   display: flex;
+  flex-wrap: wrap;
   gap: 27px;
   width: 1350px;
 }
