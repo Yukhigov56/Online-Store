@@ -33,34 +33,6 @@ export const Feed = () => {
       price: "1000 руб",
       button: "Подробнее",
     },
-    {
-      CardImg: feedImg,
-      title: 'Комплект-агро "Избушка на курьих ножках"',
-      discription: "кормушка малая",
-      price: "1000 руб",
-      button: "Подробнее",
-    },
-    {
-      CardImg: feedImg,
-      title: 'Комплект-агро "Избушка на курьих ножках"',
-      discription: "кормушка малая",
-      price: "1000 руб",
-      button: "Подробнее",
-    },
-    {
-      CardImg: feedImg,
-      title: 'Комплект-агро "Избушка на курьих ножках"',
-      discription: "кормушка малая",
-      price: "1000 руб",
-      button: "Подробнее",
-    },
-    {
-      CardImg: feedImg,
-      title: 'Комплект-агро "Избушка на курьих ножках"',
-      discription: "кормушка малая",
-      price: "1000 руб",
-      button: "Подробнее",
-    },
   ];
 
   return (
