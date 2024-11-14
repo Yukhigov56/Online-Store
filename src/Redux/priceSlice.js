@@ -16,7 +16,7 @@ const priceSlice = createSlice({
       } else if (action.payload === "400г") {
         state.price = "2000 руб";
       } else if (action.payload === "800г") {
-        state.price = "8000 руб";
+        state.price = "4000 руб";
       } else if (action.payload === "1кг") {
         state.price = "5000 руб";
       }

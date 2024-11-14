@@ -1,17 +1,23 @@
 import React from "react";
 
+import { useDispatch, useSelector } from "react-redux";
+
 import style from "./Grains.module.css";
+import { changeWeight } from "../../Redux/PriceSlice";
 
 import grainsCardImg from "../../../public/images/фото (3).svg";
-import basket from '../../../public/images/Buy.svg'
+import basket from "../../../public/images/Buy.svg";
 
 export const Grains = () => {
+  const { price, selectedWeight } = useSelector((state) => state.price);
+  const dispatch = useDispatch();
+
   const grainCards = [
     {
       CardImg: grainsCardImg,
       title: "Корм для птиц RIO Линька",
       discription: "для волнистых",
-      price: "1000 руб",
+      price: price,
       button: "Подробнее",
       logoBasket: basket,
     },
@@ -19,7 +25,7 @@ export const Grains = () => {
       CardImg: grainsCardImg,
       title: "Корм для птиц RIO Линька",
       discription: "для волнистых",
-      price: "1000 руб",
+      price: price,
       button: "Подробнее",
       logoBasket: basket,
     },
@@ -27,7 +33,7 @@ export const Grains = () => {
       CardImg: grainsCardImg,
       title: "Корм для птиц RIO Линька",
       discription: "для волнистых",
-      price: "1000 руб",
+      price: price,
       button: "Подробнее",
       logoBasket: basket,
     },
@@ -35,11 +41,15 @@ export const Grains = () => {
       CardImg: grainsCardImg,
       title: "Корм для птиц RIO Линька",
       discription: "для волнистых",
-      price: "1000 руб",
+      price: price,
       button: "Подробнее",
       logoBasket: basket,
     },
   ];
+
+  const handleWeigthChenge = (gramma) => {
+    dispatch(changeWeight(gramma))
+  }
 
   return (
     <div>
@@ -54,8 +64,10 @@ export const Grains = () => {
               <p className={style.cardParagraph}>{card.discription}</p>
               <p className={style.price}>{card.price}</p>
               <p className={style.paragraphSpan}>
-                <span>200г</span> <span>400г</span> <span>8000г</span>{" "}
-                <span>1кг</span>
+                <span onClick={() => dispatch(handleWeigthChenge('200г'))}>200г</span>
+                 <span onClick={() => dispatch(handleWeigthChenge('400г'))}>400г</span>
+                  <span onClick={() => dispatch(handleWeigthChenge('800г'))}>800г</span>
+                <span onClick={() => dispatch(handleWeigthChenge('1кг'))}>1кг</span>
               </p>
               <div className={style.blockBtn}>
                 <button className={style.btnCard}>{card.button}</button>
