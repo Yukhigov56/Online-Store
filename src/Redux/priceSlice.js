@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-
 import mixesCardImg from "../../public/images/фото (1).svg";
 import basket from "../../public/images/Buy.svg";
 
@@ -9,7 +8,16 @@ const initialState = {
       CardImg: mixesCardImg,
       title: "PADOVAN OVAMIX GOLD ROSSO",
       discription: "Корм для птиц",
-      price: "6551",
+      price: "0",
+      isNew: false,
+      button: "Подробнее",
+      logoBasket: basket,
+    },
+    {
+      CardImg: mixesCardImg,
+      title: "PADOVAN OVAMIX GOLD ROSSO",
+      discription: "Корм для птиц",
+      price: "0",
       isNew: true,
       button: "Подробнее",
       logoBasket: basket,
@@ -18,7 +26,8 @@ const initialState = {
       CardImg: mixesCardImg,
       title: "PADOVAN OVAMIX GOLD ROSSO",
       discription: "Корм для птиц",
-      price: "651",
+      price: "0",
+      isNew: true,
       button: "Подробнее",
       logoBasket: basket,
     },
@@ -26,39 +35,18 @@ const initialState = {
       CardImg: mixesCardImg,
       title: "PADOVAN OVAMIX GOLD ROSSO",
       discription: "Корм для птиц",
-      price: "1000",
-      button: "Подробнее",
-      logoBasket: basket,
-    },
-    {
-      CardImg: mixesCardImg,
-      title: "PADOVAN OVAMIX GOLD ROSSO",
-      discription: "Корм для птиц",
-      price: "515",
+      price: "0",
+      isNew: false,
       button: "Подробнее",
       logoBasket: basket,
     },
   ],
-  selectedWeight: "200г",
-  price: 1000,
 };
 
 const priceSlice = createSlice({
   name: "price",
   initialState,
   reducers: {
-    changeWeight: (state, action) => {
-      // state.selectedWeight = action.payload;
-      if (action.payload === "200г") {
-        state.price = "1000 руб";
-      } else if (action.payload === "400г") {
-        state.price = "2000 руб";
-      } else if (action.payload === "800г") {
-        state.price = "4000 руб";
-      } else if (action.payload === "1кг") {
-        state.price = "5000 руб";
-      }
-    },
     chengeNew: (state, action) => {
       state.mixes = state.mixes.map((item, index) => {
         let price;
