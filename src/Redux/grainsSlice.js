@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import grainsCardImg from "../../public/images/фото (3).svg";
-import basket from "../../public/images/Buy.svg";
+import grainsCardImg from "../images/фото (3).svg";
+import basket from "../images/Buy.svg";
 
 const initialState = {
   grains: [

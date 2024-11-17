@@ -1,9 +1,9 @@
 import React from "react";
 import style from "./Catalog.module.css";
 
-import imgCardOne from "../../../public/images/фото.svg";
-import CatalogImgTwo from '../../../public/images/Rectangle 369.svg'
-import CatalogImgThree from '../../../public/images/Rectangle 369 (1).svg'
+import imgCardOne from "../../images/фото.svg";
+import CatalogImgTwo from '../../images/Rectangle 369.svg'
+import CatalogImgThree from '../../images/Rectangle 369 (1).svg'
  
 export const SectionCatalog = () => {
   const catalog = [
