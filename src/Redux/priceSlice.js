@@ -47,7 +47,7 @@ const priceSlice = createSlice({
   name: "price",
   initialState,
   reducers: {
-    chengeNew: (state, action) => {
+    chengeNewMixes: (state, action) => {
       state.mixes = state.mixes.map((item, index) => {
         let price;
         if (action.payload.weight === "200г") {
@@ -71,5 +71,5 @@ const priceSlice = createSlice({
   },
 });
 
-export const { changeWeight, chengeNew } = priceSlice.actions;
+export const { changeWeight, chengeNewMixes } = priceSlice.actions;
 export default priceSlice.reducer;

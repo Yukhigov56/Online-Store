@@ -2,16 +2,16 @@ import React from "react";
 import style from "./Mixes.module.css";
 
 import { useDispatch, useSelector } from "react-redux";
-import { chengeNew } from "../../Redux/PriceSlice";
+import { chengeNewMixes } from "../../Redux/PriceSlice";
 
 import { New } from "./New";
 
 export const Mixes = () => {
-  const { mixes, selectedWeight } = useSelector((state) => state.price);
+  const mixes = useSelector((state) => state.mixes.mixes);
   const dispatch = useDispatch();
 
-  const handleWeigthChenge = (weight, index) => {
-    dispatch(chengeNew({ weight, index }));
+  const handleWeigthChenge = (test, index) => {
+    dispatch(chengeNewMixes({ weight:test, index }));
   };
 
   return (

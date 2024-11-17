@@ -8,7 +8,11 @@ export const SelectedFeed = () => {
   return (
     <div>
     <Header />
+    <div style={{
+      marginBottom: '25px'
+    }}>
     <Feed />
+    </div>
 
     <FooterNiz />
     </div>

@@ -1,10 +1,14 @@
-import { configureStore } from "@reduxjs/toolkit";
-import priceReducer from "./PriceSlice";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import maixesReducer from "./PriceSlice";
+import grainsReduser from "./grainsSlice";
+
+const rootReduser = combineReducers({
+  mixes: maixesReducer,
+  grains: grainsReduser,
+});
 
 const store = configureStore({
-  reducer: {
-    price: priceReducer,
-  },
+  reducer: rootReduser,
 });
 
 export default store;
