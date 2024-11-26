@@ -6,7 +6,7 @@ const initialState = {
   mixes: [
     {
       CardImg: mixesCardImg,
-      title: "PADOVAN OVAMIX GOLD ROSSO",
+      title: "PADOVAN",
       discription: "Корм для птиц",
       price: "0",
       isNew: false,
@@ -15,7 +15,7 @@ const initialState = {
     },
     {
       CardImg: mixesCardImg,
-      title: "PADOVAN OVAMIX GOLD ROSSO",
+      title: " ROSSO",
       discription: "Корм для птиц",
       price: "0",
       isNew: true,

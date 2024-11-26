@@ -8,11 +8,18 @@ import { New } from "./New";
 
 export const Mixes = () => {
   const mixes = useSelector((state) => state.mixes.mixes);
+  const searchTerm = useSelector((state) => state.search.setSearch)
   const dispatch = useDispatch();
 
   const handleWeigthChenge = (test, index) => {
     dispatch(chengeNewMixes({ weight:test, index }));
   };
+
+
+  const filteredMixes = mixes.filter((card) =>
+  card.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  card.discription.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div>
@@ -20,8 +27,9 @@ export const Mixes = () => {
 
       <div className={style.mainContainer}>
         <div className={style.containerCard}>
-          {mixes.map((card, index) => (
-            <div className={style.card}>
+      
+          {filteredMixes.map((card, index) => (
+            <div className={style.card} key={index}>
               <img src={card.CardImg} alt="" />
               {card.isNew && <New />}
               <h1 className={style.cardTitle}>{card.title}</h1>

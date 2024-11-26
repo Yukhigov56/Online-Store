@@ -2,14 +2,23 @@ import React from "react";
 import style from "./CotalogInput.module.css";
 
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setSearchTerm } from "../../../Redux/searchSlice";
 
 export const CatalogInput = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const searchTerm = useSelector((state) => state.search.setSearch)
+console.log(searchTerm);
+
+const handleChangeInput = (e) => {
+  const value = e.target.value
+  dispatch(setSearchTerm(value))
+}  
 
   const handlChengeValue = (e) => {
     const value = e.target.value;
-    console.log(value);
     if (value === "feed") {
       navigate('/feed')
     }
@@ -17,7 +26,7 @@ export const CatalogInput = () => {
       navigate('/mixes')
     }
     if (value === "app") {
-      navigate('/')
+      navigate('/Online-Store')
     }
   };
 
@@ -42,7 +51,13 @@ export const CatalogInput = () => {
       </div>
 
       <div className={style.blockInput}>
-        <input className={style.input} type="text" placeholder="Поиск" />
+        <input 
+        className={style.input} 
+        type="text"
+         placeholder="Поиск" 
+         value={searchTerm}
+         onChange={handleChangeInput}
+         />
         <i class="fas fa-search"></i>
       </div>
     </div>
