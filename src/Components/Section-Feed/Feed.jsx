@@ -1,7 +1,7 @@
 import React from "react";
 
 import style from "./Feed.module.css";
-import feedImg from "../../../public/images/фото (4).svg";
+import feedImg from "../../images/фото (4).svg";
 
 export const Feed = () => {
   const FeedCards = [

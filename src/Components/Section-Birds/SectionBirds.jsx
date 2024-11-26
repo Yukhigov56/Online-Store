@@ -1,7 +1,7 @@
 import React from "react";
 
 import style from "./SectionBirds.module.css";
-import CardBirds from '../../../public/images/фото (2).svg'
+import CardBirds from '../../images/фото (2).svg'
 
 export const SectionBirds = () => {
   const cardBirds = [

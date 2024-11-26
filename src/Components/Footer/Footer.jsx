@@ -1,6 +1,6 @@
 import style from "./Footer.module.css";
 
-import iPhone from "../../../public/images/iPhone 12 Pro.svg";
+import iPhone from "../../images/iPhone 12 Pro.svg";
 import { FooterNiz } from "./Footer-Niz/FooterNiz";
 
 export const Footer = () => {

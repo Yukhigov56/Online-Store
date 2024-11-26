@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import mixesCardImg from "../../public/images/фото (1).svg";
-import basket from "../../public/images/Buy.svg";
+import mixesCardImg from "../images/фото (1).svg";
+import basket from "../images/Buy.svg";
 
 const initialState = {
   mixes: [
